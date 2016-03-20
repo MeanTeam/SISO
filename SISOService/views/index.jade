@@ -1,0 +1,72 @@
+extends layout
+block content
+    h1= title
+    p Welcome to our Sign In - Out
+
+   
+
+        // SIGN IN
+        h2 Sign In
+        #addUser
+            fieldset
+                input#inputUserPin(type='text', placeholder='UserPin')
+                input#inputUserEmail(type='text', placeholder='Email')
+                br
+                input#inputUserFullname(type='text', placeholder='Full Name')
+                input#inputUserPhone(type='text', placeholder='Phone')
+                br
+                input#inputUserLocation(type='text', placeholder='Location')
+                input#inputUserManager(type='text', placeholder='Manager')
+                input#inputUserSignInTime(type='text', placeholder='SignInTime')
+                br
+                button#btnAddUser Sign In
+        // /SIGN IN
+        br    
+
+        // SIGN OUT
+        h2 Sign out
+        #findUser
+             fieldset
+                input#inputSignoutUserPin(type='text', placeholder='UserPin')
+                br
+                button#btnSignOut SignOut
+        // /SIGN OUT
+        br    
+        // FIND USER Signed in by Manager
+        h2 Find User(s) Signed in by Manager
+        #findUser
+             fieldset
+                input#inputFindUserByMng(type='text', placeholder='Manager')
+
+                br
+                button#btnFindUser Find Signed In Users
+        #findUserList
+            br
+            table
+                thead
+                    th User Pin
+                    th Full Name
+                    th Email
+                    th Location
+                    th Phone
+                    th Sign In Time
+
+                tbody 
+        // /FIND USER
+        br
+        h2 All the Users Signed In
+
+        #findAllUserList
+            br
+            table
+                thead
+                    th User Pin
+                    th Full Name
+                    th Email
+                    th Location
+                    th Phone
+                    th Sign In Time
+
+                tbody 
+        
+    // /WRAPPER
